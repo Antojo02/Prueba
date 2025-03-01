@@ -36,3 +36,22 @@ doHomework('math').then(function() {
 }).then(function() {
     finishedHomework();
 }); //Output: Starting my math homework. Starting my science homework. Starting my history homework. Finished my homework
+
+
+// Ejemplo de promesa promise.all
+
+function doHomework(subject) {
+    console.log(`Starting my ${subject} homework.`);
+    return new Promise(function(resolve, reject) {
+        resolve('Finished my homework');
+    });
+}
+
+let math = doHomework('math');
+let science = doHomework('science');
+let history = doHomework('history');
+
+Promise.all([math, science, history]).then(function(results) {
+    console.log(results);
+}); //Output: Starting my math homework. Starting my science homework. Starting my history homework. [ 'Finished my homework', 'Finished my homework', 'Finished my homework' ] 
+

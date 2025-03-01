@@ -43,3 +43,12 @@ const miPromesa = new Promise((aceptar, rechazar) => {
 miPromesa
     .then(resultado => console.log(resultado))
     .catch(error => console.error(error));
+
+
+
+APIs (define métodos y comportamientos estandarizados )
+
+`XMLHttpRequest` (El viejo método para solicitud)
+`Fetch` (El nuevo y moderno método para solicitud)
+
+`Promise` (Remplaza callback para programción Asíncrona)

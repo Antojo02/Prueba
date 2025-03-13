@@ -11,5 +11,6 @@ fetch('https://reqres.in/api/users?page=2')
         console.log(data);
     })
     .catch(error => {
+        console.log("hola")
         console.error('There was a problem with the fetch operation:', error);
     });
